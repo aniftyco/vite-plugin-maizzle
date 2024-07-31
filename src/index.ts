@@ -48,7 +48,11 @@ export default (config?: MaizzleConfig): Plugin => {
   return {
     name: 'maizzle:serve',
     configResolved: build,
-    handleHotUpdate: build,
+    handleHotUpdate({ file }) {
+      if (!file.startsWith(options.dest)) {
+        build();
+      }
+    },
     configureServer(server) {
       setTimeout(() => {
         server.config.logger.info(
