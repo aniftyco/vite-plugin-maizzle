@@ -10,10 +10,14 @@
   "type": "module",
   "exports": {
     ".": {
-      "import": "./dist/index.js",
+      "default": "./dist/index.js",
       "types": "./dist/index.d.ts"
     }
   },
+  "types": "./dist/index.d.ts",
+  "files": [
+    "./dist"
+  ],
   "scripts": {
     "start": "vite",
     "build": "tsc -p tsconfig.json --outDir dist",
