@@ -25,7 +25,8 @@
   },
   "prettier": "@aniftyco/prettier",
   "dependencies": {
-    "picocolors": "^1.0.1"
+    "picocolors": "^1.0.1",
+    "tailwindcss-preset-email": "^1.3.2"
   },
   "devDependencies": {
     "@aniftyco/prettier": "^0.1.0",
@@ -33,7 +34,6 @@
     "@types/node": "^20.14.12",
     "prettier": "^3.3.3",
     "tailwindcss": "^3.4.7",
-    "tailwindcss-preset-email": "^1.3.2",
     "typescript": "^5.2.2",
     "vite": "^5.3.4"
   }
