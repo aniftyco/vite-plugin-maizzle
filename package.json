@@ -1,0 +1,36 @@
+{
+  "name": "vite-plugin-maizzle",
+  "version": "0.0.0",
+  "description": "Vite plugin for Maizzle",
+  "keywords": [
+    "vite",
+    "vite-plugin",
+    "maizzle"
+  ],
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "start": "vite",
+    "build": "tsc -p tsconfig.json --outDir dist",
+    "prepublishOnly": "npm run build"
+  },
+  "prettier": "@aniftyco/prettier",
+  "dependencies": {
+    "picocolors": "^1.0.1"
+  },
+  "devDependencies": {
+    "@aniftyco/prettier": "^0.1.0",
+    "@maizzle/framework": "^4.8.9",
+    "@types/node": "^20.14.12",
+    "prettier": "^3.3.3",
+    "tailwindcss": "^3.4.7",
+    "tailwindcss-preset-email": "^1.3.2",
+    "typescript": "^5.2.2",
+    "vite": "^5.3.4"
+  }
+}
