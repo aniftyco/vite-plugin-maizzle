@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite';
-import maizzle from './src/index';
+import maizzle from './dist/index.js';
 
 export default defineConfig({
   plugins: [
