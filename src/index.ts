@@ -49,7 +49,7 @@ export default (config?: MaizzleConfig): Plugin => {
     name: 'maizzle:serve',
     configResolved: build,
     handleHotUpdate({ file }) {
-      if (!file.startsWith(options.dest)) {
+      if (file.startsWith(options.src)) {
         build();
       }
     },
