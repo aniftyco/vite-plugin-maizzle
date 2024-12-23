@@ -1,13 +1,14 @@
+import { relative } from 'path';
 import { Plugin } from 'vite';
 import { toDisk } from '@maizzle/framework/src/generators/output/index.js';
 import colors from 'picocolors';
-import { relative } from 'path';
 import email from 'tailwindcss-preset-email';
 
 type MaizzleConfig = {
   src?: string;
   dest?: string;
   ext?: string;
+  tailwind?: Record<string, any>;
 };
 
 export default (config?: MaizzleConfig): Plugin => {
@@ -23,7 +24,8 @@ export default (config?: MaizzleConfig): Plugin => {
       build: {
         tailwind: {
           config: {
-            plugins: [email],
+            ...options.tailwind,
+            plugins: [email, ...(options.tailwind?.plugins || [])],
           },
         },
         components: {
