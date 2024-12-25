@@ -58,7 +58,7 @@ export default (config?: MaizzleConfig): Plugin => {
     configureServer(server) {
       setTimeout(() => {
         server.config.logger.info(
-          `  ${colors.green('➜')}  ${colors.bold('Maizzle')}: ${colors.dim(`compiling ${colors.reset(relative(process.cwd(), options.src))} ${colors.dim('➜')} ${colors.reset(relative(process.cwd(), options.dest))}`)}`
+          `  ${colors.dim(colors.green('➜'))}  ${colors.dim(colors.bold('Maizzle:'))} ${colors.dim(`compiling ${colors.reset(relative(process.cwd(), options.src))} ${colors.dim('to')} ${colors.reset(relative(process.cwd(), options.dest))}`)}`
         );
       }, 100);
     },
